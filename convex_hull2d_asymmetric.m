@@ -32,7 +32,7 @@ function new_values = convex_hull2d_asymmetric(values, xgrid, ygrid, parameters)
         for j = 1:length(ygrid) 
             border_values(j) = - pcws(j).values(1) + pcws(j).left_slope * (pcws(j).grid(1) - lwb);
         end
-        [left_slopes, tfix]= asymptotic_convex_hull(ygrid, border_values, pcws(:).left_slope, left_slopes, tfix);
+        [left_slopes, tfix]= asymptotic_convex_hull(ygrid, border_values, [pcws.left_slope], left_slopes, tfix);
 %         ! we did not change sign for the left_slope since that is already taken in account
 %         ! by the fact that "time" is inverted
         lwb = lwb - tfix;

@@ -1,14 +1,15 @@
-% xgrid = [-1.5:0.1:1.5];
-% ygrid=[-1.5:0.1:1.5];
-xgrid = [-3:0.1:3];
-ygrid=[-3:0.1:3];
+xgrid = [-1.5:0.1:1.5];
+ygrid=[-1.5:0.1:1.5];
+% xgrid = [-3:0.1:3];
+% ygrid=[-3:0.1:3];
 % xgrid = [-2:1:2];
 % ygrid=[-2:1:2];
-values = function2(xgrid,ygrid);
+values = function1(xgrid,ygrid);
 mesh(xgrid,ygrid,values) 
-symmetric = true;
+symmetric = true; %max alternating algo
+% symmetric = false; %alternating algo
 % doubleDLFT = false;
-doubleDLFT = true;
+doubleDLFT = true; %standard dlft
 xy_order=true;
 dual_grid_type=0;
 dg_ext_slopes=false;
