@@ -1,0 +1,11 @@
+
+Paper: A linear-time approximate convex envelope algorithm
+using the double Legendre–Fenchel transform with
+application to phase separation
+
+Fortran code originally from the authors of the paper referred to here:
+Lorenzo Contento · Alexandre Ern · Rossana Vermiglio
+
+Thanks to Lorenzo Contento for sharing the Fortran code for reference.
+
+Thanks to my supervisor, Dr. Yves Lucet, for guiding me throughout in understanding and implementing this paper.
