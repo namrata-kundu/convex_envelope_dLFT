@@ -3,15 +3,28 @@ classdef ConvexHull2D
     %   Detailed explanation goes here
     
     properties
-        Property1
+        parameters
     end
     
     methods(Static)
-%         function obj = ConvexHull2D(inputArg1,inputArg2)
-%             %CONVEXHULL2D Construct an instance of this class
-%             %   Detailed explanation goes here
-%             obj.Property1 = inputArg1 + inputArg2;
-%         end
+        function obj = ConvexHull2D(symmetric,doubleDLFT,xy_order,dual_grid_type,dg_ext_slopes,dg_inject,dg_inject_value, dg_slices,dg_only_slice,dg_size,dg_no_auto,dg_lwb,dg_upb)
+            %CONVEXHULL2D Construct an instance of this class
+            %   Detailed explanation goes here
+            obj.parameters = containers.Map();
+            obj.parameters('symmetric')=symmetric;
+            obj.parameters('doubleDLFT')=doubleDLFT;
+            obj.parameters('xy_order')=xy_order;
+            obj.parameters('dual_grid_type')=dual_grid_type;
+            obj.parameters('dg_ext_slopes')=dg_ext_slopes;
+            obj.parameters('dg_inject')=dg_inject;
+            obj.parameters('dg_inject_value')=dg_inject_value;
+            obj.parameters('dg_slices')=dg_slices;
+            obj.parameters('dg_only_slice')=dg_only_slice;
+            obj.parameters('dg_size')=dg_size;
+            obj.parameters('dg_no_auto')=dg_no_auto;
+            obj.parameters('dg_lwb')=dg_lwb;
+            obj.parameters('dg_upb')=dg_upb;
+         end
         
         function array = injector(array, value)
             i = bisect(array, value);
@@ -341,7 +354,6 @@ classdef ConvexHull2D
             end 
 
         end
-
 
         
     end

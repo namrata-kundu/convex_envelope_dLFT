@@ -3,15 +3,10 @@ classdef ConvexHull1D
     %   Detailed explanation goes here
     
     properties
-        Property1
+        
     end
     
     methods(Static)
-        function obj = ConvexHull1D(inputArg1,inputArg2)
-            %CONVEXHULL1D Construct an instance of this class
-            %   Detailed explanation goes here
-            obj.Property1 = inputArg1 + inputArg2;
-        end
         
         function index = bisect(array, x)
             if (length(array) == 1)
