@@ -14,7 +14,7 @@ function new_values = call_convex_hull2d(values, xgrid, ygrid,symmetric,doubleDL
     parameters('dg_lwb')=dg_lwb;
     parameters('dg_upb')=dg_upb;
     
-    new_values = convex_hull2d(values, xgrid, ygrid, parameters)
+    new_values = ConvexHull2D.convex_hull2d(values, xgrid, ygrid, parameters)
  
 end
 

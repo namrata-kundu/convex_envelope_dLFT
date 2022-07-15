@@ -19,7 +19,7 @@ classdef PiecewiseLinear_t
         function y = evaluate(obj,x)
             %METHOD1 Summary of this method goes here
             %   Detailed explanation goes here
-            y = piecewise_linear_interpolation(obj.grid, obj.values, obj.left_slope, obj.right_slope, x);
+            y = ConvexHull1D.piecewise_linear_interpolation(obj.grid, obj.values, obj.left_slope, obj.right_slope, x);
         end
         
     end
