@@ -1,3 +1,4 @@
+%%Running examples
 
 xgrid = (-1.5:0.1:1.5);
 ygrid=(-1.5:0.1:1.5);
@@ -15,7 +16,6 @@ run_example(xgrid, ygrid, @function4)
 
 
 function run_example(xgrid,ygrid, function_to_run)
-% %(x^2 + y^2 - 1)^2
 
     values = function_to_run(xgrid,ygrid);
     mesh(xgrid,ygrid,values)
